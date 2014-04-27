@@ -1,0 +1,220 @@
+// Jekyll will soon support SASS compilation: http://jekyllrb.com/docs/assets/
+// Then we can drop grunt-sass
+// ---
+// ---
+
+/**
+ * Font Awesome to override default path
+ */
+$fa-font-path: "fonts";
+@import "../bower_components/fontawesome/scss/font-awesome";
+
+/**
+ * Foundation settings and selective imports
+ */
+$body-bg: image-url("bg.png") repeat-x scroll 0 0 #8a421c;
+$header-font-family: "Georgia",serif;
+$header-font-weight: normal;
+$header-font-style: italic;
+
+@import "../bower_components/foundation/scss/foundation/functions";
+$h1-font-size: rem-calc(31);
+$h2-font-size: rem-calc(27);
+$h3-font-size: rem-calc(23);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(17);
+$h6-font-size: 1rem;
+
+@import "../bower_components/foundation/scss/foundation/components/global";
+$topbar-bg: none;
+$topbar-height: 100px;
+$logo-padding: strip-unit(7rem);
+$topbar-media-query: "#{$screen} and (min-width:#{lower-bound($medium-range) + $logo-padding})" !default;
+
+@import "../bower_components/foundation/scss/foundation/components/type";
+@import "../bower_components/foundation/scss/foundation/components/grid";
+@import "../bower_components/foundation/scss/foundation/components/block-grid";
+@import "../bower_components/foundation/scss/foundation/components/buttons";
+@import "../bower_components/foundation/scss/foundation/components/inline-lists";
+@import "../bower_components/foundation/scss/foundation/components/top-bar";
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+
+/**
+ * Our styles
+ */
+@mixin text-shadow {
+  text-shadow: 0 1px 1px #131313;
+}
+
+.fa-github {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+section header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.patterned {
+  background: image-url("stbg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+nav.top-bar {
+  border-top: 1px solid #BB6133;
+  margin-top: 7px;
+  background: none;
+
+  .title-area .name {
+    padding-top: 15px;
+    padding-left: 15px;
+    @media (max-width: 450px) { width: 70%; }
+  }
+  .menu-icon span {
+    @media (max-width: 375px) { visibility: hidden; }
+  }
+
+  &:not(.expanded) {
+    .top-bar-section {
+      ul { background: none; }
+      li a,
+      li:not(.has-form),
+      a:not(.button) { line-height: 4rem; }
+    }
+    .divider { visibility: hidden; }
+  }
+}
+
+#intro {
+  color: #f5b99a;
+  @include text-shadow;
+
+  h1, h1 small {
+    color: #f1eee5;
+    @include text-shadow;
+  }
+  h3 { color: #f5b99a; }
+  div:first-of-type header {
+    background: image-url("hdhr.png") no-repeat scroll 0 100% rgba(0, 0, 0, 0);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  div > div:first-of-type {
+    background-image: image-url("vertbg.gif");
+    background-repeat: repeat-y;
+    background-position: right;
+  }
+}
+
+.users {
+  text-align: center;
+
+  li .box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 1px 1px 0 rgba(245, 185, 155, 0.9);
+    display: table;
+    width: 100%;
+    height: 5.4rem;
+    padding: 0 0.5rem;
+
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      img {
+        width: 100%;  // Firefox needs this
+      }
+    }
+  }
+
+  .button {
+    color: #5a380d;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #ffb515;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-shadow: none;
+  }
+}
+
+#features,
+#about {
+  ul, dl { padding: 0 2rem; }
+  p, li { font-size: 0.9rem; }
+}
+
+#features {
+  background: image-url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #f1eee5;
+  padding: 1rem 0;
+  @include text-shadow;
+
+  > div {
+    background: image-url("weave-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 1rem 0;
+  }
+  h2 { color: #f1eee5; }
+  li {
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+
+    &:before {
+      content: '\f005';
+      color: yellow;
+      display: inline-block;
+      font-family: FontAwesome;
+      margin-left: -1.4rem;
+      width: 1.4rem;
+    }
+  }
+}
+
+#about {
+  background: image-url("paper-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #444;
+  padding: 1rem 0;
+
+  > div {
+    background: image-url("paper-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 1rem 0;
+    border-top: 1px solid #e2dfd6;
+  }
+  #faq {
+    border-top: 1px dotted rgba(0, 0, 0, 0.63);
+    padding-top: 1rem;
+  }
+  @media #{$medium-up} {
+    .dl-columns {
+      @include grid-column(6);
+    }
+  }
+  @media #{$large-up} {
+    .dl-columns {
+      @include grid-column(4);
+    }
+  }
+  dt { padding-left: 0.5rem; }
+  dd {
+    background: none repeat scroll 0 0 #edebe4;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #c3bfb4 inset;
+    padding: 1rem;
+
+    p { font-size: 0.8rem; }
+  }
+}
+
+footer {
+  background: image-url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #626262;
+  padding-top: 1em;
+
+  > div { background-color: #0d0d0d; }
+  p {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+  }
+}

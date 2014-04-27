@@ -1,0 +1,112 @@
+---
+layout: base
+title: Armstrong - Open Source News Platform
+excerpt: An open source toolkit for building sites focused on content, authorship, scheduled publishing and flexible presentation.
+---
+<div class="patterned">
+  {% include nav.html %}
+
+  <section id="intro">
+   <div class="row">
+      <header class="small-10 small-centered columns">
+        <h1>Welcome to Armstrong: the world's only dedicated toolkit for building news-focused content-management systems.<br />
+        <small>If your organization wants to invest in distribution, engagement and interaction as much as content itself, Armstrong is the best place to start.</small></h1>
+      </header>
+    </div>
+
+    <div class="row">
+      <div class="medium-6 columns">
+        <p>Everyone hates content-mangement systems. They're inflexible, hard to use, and rarely meet all of an organization's needs. So rather than being fenced in by an off-the-shelf system, why not create your own?</p>
+
+        <p>Armstrong is an open source toolkit for building content-management systems for the news and publishing industries. More flexible than tools like Wordpress, Armstrong is a set of building blocks for creating the perfect CMS to fit your organization's unique needs.</p>
+      </div>
+
+      <div class="medium-6 columns users">
+        <header><h3>Now being used by&hellip;</h3></header>
+        <ul class="small-block-grid-2">
+          <li><div class="box"><a href="http://www.texastribune.org"><img src="assets/tribune.png"></a></div></li>
+          <li><div class="box"><a href="http://www.baycitizen.org"><img src="assets/baycitizen.png"></a></div></li>
+          <li><div class="box"><a href="http://www.crosscut.com"><img src="assets/crosscut.png"></a></div></li>
+          <li><div class="box"><a href="http://www.dailydot.com"><img src="assets/dailydot.png"></a></div></li>
+        </ul>
+        <a class="button round" href="https://github.com/armstrong/"><i class="fa fa-github"></i> Get the code!</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="features">
+  <div>
+    <div class="row">
+      <header><h2>&mdash;A Few Notable Features&mdash;</h2></header>
+      <ul class="medium-block-grid-2 large-block-grid-3">
+        <li>Built using Django, the open source framework for perfectionists with deadlines</li>
+        <li>Hatband: A upgraded Django administration interface that includes rich text editing functionality</li>
+        <li>Scaffolding for business-side features like paywalls and donations.</li>
+        <li>Modular layout system lets you change or create page designs on the fly</li>
+        <li>Media management, including in-CMS image cropping (coming soon)</li>
+        <li>Built with developer flexibility in mind. Use as much or as little of Armstrong as you need.</li>
+        <li>Generic content models. Everything relates to everything else.</li>
+        <li>Extensible base models for content types like articles, photo galleries and multimedia.</li>
+        <li>Collaborate with top-flight news developers at places like The Texas Tribune and The Bay Citizen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div>
+    <div class="row">
+      <header><h2>&mdash;A Little Bit About Armstrong&mdash;</h2></header>
+      <ul class="medium-block-grid-2 large-block-grid-3">
+        <li>Armstrong is an open-source toolkit for building content-management systems for news. It is the result of a collaboration between The Texas Tribune and Bay Citizen, and a grant from the John S. and James L. Knight Foundation. You can find the code on <a target="_blank" href="https://github.com/armstrong">Github</a> and the documentation <a href="http://docs.armstrongcms.org">here</a>.</li>
+        <li>Armstrong is built on top of the Django framework, a Python web framework that was born in the hectic pace and pressing deadlines of a newsroom. It is flexible enough to handle 99% of the content any news organization generates and is customizable enough that developers can extend it to handle the 1% that makes your organization unique.</li>
+        <li>Armstrong provides the software, and your organization provides the technical talent to create the design, setup the software, and migrate any existing content into the new system. Depending on the needs of your organization, this can be an in-house developer (or development team) or one of the many consulting firms that specialize in Django web applications.</li>
+      </ul>
+    </div>
+    <div class="row" id="faq">
+      <header><h2>&mdash;Frequently Asked Questions&mdash;</h2></header>
+      <dl>
+        <div class="dl-columns">
+          <dt>How is Armstrong different from Drupal or Wordpress?</dt>
+          <dd>
+            <p>Tools like Wordpress and Drupal are fully features content-management systems. Armstrong is not. Instead, Armstrong is a low-level programming framework for building a CMS customized to your specific needs.</p>
+            <p>Off-the-shelf CMS systems like Wordpress are great for helping you quickly and easily accomplish traditional publishing tasks&mdash;posting news stories or blog posts, for instance&mdash;but also impose constraints about the types of non-traditional features your site can employ, such as deep integration with interactive databases, or creative applications like interactive games. Building out those features typically requires custom programming, which is where Armstrong steps in.</p>
+            <p>Rather than forcing developers to start from scratch, Armstrong provides the core scaffolding around which you can build a custom content-management system. It's a framework on top of a framework, designed to allow rapid and creative CMS development.</p>
+          </dd>
+        </div>
+        <div class="dl-columns">
+          <dt>Sounds like I need to hire a developer. Isn't that expensive?</dt>
+          <dd>
+            <p>If you're a publisher interested launching or converting a news site using Armstrong, you will need to get developers involved. The cost of custom development will depend almost entirely on the features you have in mind and the scale of your custom implementation. A simple site could be launched for several thousand dollars and just a few weeks of developer time, but a complex site could require much more time and financial investment.</p>
+            <p>If you're a developer looking to use Armstrong, or part of Armstrong, in your next CMS buildout, we encourage you to check out the code and read the documentation to see if any of our modules would be right for you.</p>
+          </dd>
+        </div>
+        <div class="dl-columns right">
+          <dt>What about hosting?</dt>
+          <dd>
+            <p>We don't provide hosting, but we're happy to provide guidance. Armstrong will run on any system that supports Django applications. You can see those requirements here. We're partial to Amazon EC2 or Rackspace Cloud servers; MySQL or PostgreSQL database backends; Amazon S3 for static media hosting; and Varnish and/or memcached for a cache setup.</p>
+          </dd>
+        </div>
+        <div class="dl-columns">
+          <dt>Do you provide any support?</dt>
+          <dd>
+            <p>No. Any support should be arranged between you and your implementation team. We are open to providing consulting, though. Contact us for more information.</p>
+          </dd>
+        </div>
+        <div class="dl-columns right">
+          <dt>How can my development team contribute back to Armstrong?</dt>
+            <dd>
+              <p>Armstrong is an open-source project. Development happens on <a href="http://github.com/armstrong">GitHub</a> with discussion taking place on our <a href="http://groups.google.com/group/armstrongcms/">Google Groups</a> mailing list. For more information on contributing, check out our <a href="http://github.com/armstrong/armstrong/wiki/Contributing">GitHub page</a>.</p>
+            </dd>
+          </div>
+        <div class="dl-columns">
+          <dt>What's next for the project?</dt>
+          <dd>
+            <p>Armstrong was funded under a grant from the John S. and James L. Knight Foundation, which expired in 2012. The grant's original partners, The Texas Tribune and The Bay Citizen are actively running their sites on instances of the platform and will continue to contribute code back into the framework on a case-by-case basis. Among the features scheduled to be backported in late 2012 and early 2013 are an enhanced layout system and improved image handling, including in-CMS image cropping.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
