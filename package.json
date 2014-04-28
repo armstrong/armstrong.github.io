@@ -1,0 +1,19 @@
+{
+  "name": "armstrong.github.io",
+  "version": "0.1.0",
+  "homepage": "http://armstrong.github.io",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/armstrong/armstrong/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armstrong/armstrong.github.io.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-sass": "^0.12.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0"
+  }
+}

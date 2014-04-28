@@ -1,0 +1,17 @@
+{
+  "name": "armstrong.github.io",
+  "version": "0.1.0",
+  "homepage": "http://armstrong.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.2.2",
+    "fontawesome": "~4.0.3"
+  }
+}
