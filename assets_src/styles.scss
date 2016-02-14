@@ -14,7 +14,7 @@ $fa-font-path: "fonts";
 /**
  * Foundation settings and selective imports
  */
-$body-bg: image-url("bg.png") repeat-x scroll 0 0 #8a421c;
+$body-bg: url("bg.png") repeat-x scroll 0 0 #8a421c;
 $header-font-family: "Georgia",serif;
 $header-font-weight: normal;
 $header-font-style: italic;
@@ -29,7 +29,7 @@ $h6-font-size: 1rem;
 
 @import "../bower_components/foundation/scss/foundation/components/global";
 $topbar-bg: none;
-$topbar-height: 100px;
+$topbar-height: rem-calc(120);
 $logo-padding: strip-unit(7rem);
 $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($medium-range) + $logo-padding})" !default;
 
@@ -59,7 +59,7 @@ section header {
 }
 
 .patterned {
-  background: image-url("stbg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("stbg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 nav.top-bar {
@@ -97,12 +97,12 @@ nav.top-bar {
   }
   h3 { color: #f5b99a; }
   div:first-of-type header {
-    background: image-url("hdhr.png") no-repeat scroll 0 100% rgba(0, 0, 0, 0);
+    background: url("hdhr.png") no-repeat scroll 0 100% rgba(0, 0, 0, 0);
     padding-bottom: 0.6rem;
     margin-bottom: 1.5rem;
   }
   div > div:first-of-type {
-    background-image: image-url("vertbg.gif");
+    background-image: url("vertbg.gif");
     background-repeat: repeat-y;
     background-position: right;
   }
@@ -148,13 +148,13 @@ nav.top-bar {
 }
 
 #features {
-  background: image-url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: #f1eee5;
   padding: 1rem 0;
   @include text-shadow;
 
   > div {
-    background: image-url("weave-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("weave-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     padding: 1rem 0;
   }
   h2 { color: #f1eee5; }
@@ -175,12 +175,12 @@ nav.top-bar {
 }
 
 #about {
-  background: image-url("paper-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("paper-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: #444;
   padding: 1rem 0;
 
   > div {
-    background: image-url("paper-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("paper-light.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     padding: 1rem 0;
     border-top: 1px solid #e2dfd6;
   }
@@ -210,7 +210,7 @@ nav.top-bar {
 }
 
 footer {
-  background: image-url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("weave-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: #626262;
   padding-top: 1em;
 
