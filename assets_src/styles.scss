@@ -30,8 +30,8 @@ $h6-font-size: 1rem;
 @import "../bower_components/foundation/scss/foundation/components/global";
 $topbar-bg: none;
 $topbar-height: rem-calc(120);
-$logo-padding: strip-unit(7rem);
-$topbar-media-query: "#{$screen} and (min-width:#{lower-bound($medium-range) + $logo-padding})" !default;
+$logo-padding: strip-unit(15rem);
+$topbar-breakpoint: #{lower-bound($medium-range) + 3} !default;
 
 @import "../bower_components/foundation/scss/foundation/components/type";
 @import "../bower_components/foundation/scss/foundation/components/grid";
@@ -84,6 +84,9 @@ nav.top-bar {
       a:not(.button) { line-height: 4rem; }
     }
     .divider { visibility: hidden; }
+  }
+  .top-bar-section .right li a {
+    @media #{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{lower-bound($medium-range) + $logo-padding}) { padding: 1.5em; }
   }
 }
 
