@@ -1,6 +1,4 @@
 name: Armstrong - Open Source News Platform
-markdown: redcarpet
-pygments: true
 encoding: utf-8
 exclude: [
 	"CNAME",
